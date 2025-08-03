@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const path = require('path');
 require('dotenv').config();
 
 const authRoutes = require('./routes/auth');
@@ -37,6 +38,19 @@ app.get('/api/protected', authenticateToken, (req, res) => {
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
+});
+
+// Serve static files from the React app build directory
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+// Root route - serve the React app
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
+});
+
+// Catch all handler - send back React's index.html file for any non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build/index.html'));
 });
 
 app.listen(PORT, () => {
