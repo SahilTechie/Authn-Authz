@@ -1,6 +1,6 @@
 # Secure Authentication System
 
-A modern, secure authentication system built with React.js, Node.js, and MongoDB. Features include user registration, login, JWT authentication, and a beautiful animated UI.
+A modern, secure authentication system built with React.js, Node.js, and MongoDB. Features include user registration, login, JWT authentication, and a simple UI.
 
 ## Features
 
@@ -112,9 +112,9 @@ Auth/
 
 ## Frontend Features
 
-- 🎨 Modern, clean UI design
+- 🎨 clean UI design
 - 📱 Fully responsive layout
-- ✨ Smooth page transitions and animations
+- ✨ Smooth page transitions
 - 🔄 Real-time form validation
 - 📊 Loading states and error handling
 - 🎯 Protected route implementation
