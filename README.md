@@ -131,6 +131,20 @@ JWT_SECRET=your-super-secret-jwt-key
 CLIENT_URL=http://localhost:3000
 ```
 
+## Quick Deploy
+
+### Deploy to Render
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/SahilTechie/Authn-Authz)
+
+### Deploy to Railway
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/3QFHWz?referralCode=alphasec)
+
+### Deploy to Vercel
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SahilTechie/Authn-Authz)
+
+### Deploy to Heroku
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SahilTechie/Authn-Authz)
+
 ## Contributing
 
 1. Fork the repository

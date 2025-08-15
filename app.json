@@ -1,0 +1,41 @@
+{
+  "name": "Secure Authentication System",
+  "description": "A modern, secure authentication system built with React.js, Node.js, and MongoDB",
+  "repository": "https://github.com/SahilTechie/Authn-Authz",
+  "logo": "https://raw.githubusercontent.com/SahilTechie/Authn-Authz/main/client/public/logo192.png",
+  "keywords": ["authentication", "react", "nodejs", "mongodb", "jwt", "express"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "echo 'Deployment completed successfully!'"
+  },
+  "env": {
+    "NODE_ENV": {
+      "description": "Node environment",
+      "value": "production"
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB Atlas connection string",
+      "required": true
+    },
+    "JWT_SECRET": {
+      "description": "JWT secret key for token signing (use a strong random string)",
+      "generator": "secret",
+      "required": true
+    },
+    "CLIENT_URL": {
+      "description": "Frontend URL (will be your Heroku app URL)",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "addons": []
+}
